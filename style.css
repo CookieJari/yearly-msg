@@ -90,12 +90,12 @@ button {
     height: 60%;
   }
   80% {
-    width: 30%;
-    height: 60%;
+    width: max(300px, 30%);
+    height: max(500px, 60%);
   }
   100% {
-    width: 30%;
-    height: 60%;
+    width: max(300px, 30%);
+    height: max(500px, 60%);
   }
 }
 
