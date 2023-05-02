@@ -17,42 +17,97 @@ body {
   margin: 0px;
 }
 .page-container {
-  border: 1px solid red;
   height: 100%;
   background-color: var(--color-dark-green);
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .message-container {
   background-color: var(--color-contrast);
   border-radius: 50px;
   color: var(--color-light);
-  width: 30%;
-  height: 60%;
+  width: 0%;
+  height: 0%;
   display: grid;
   grid-template-rows: 2fr 1fr;
 }
+.start-anim {
+  animation-name: open-msg;
+  animation-duration: 1s;
+  -webkit-animation: open-msg 1s forwards; /* for less modern browsers */
+  animation: open-msg 1s forwards;
+}
+.message-container > div {
+  opacity: 0;
+}
+.start-anim-2 {
+  animation-name: contents;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  -webkit-animation: contents 1s forwards 1s; /* for less modern browsers */
+  animation: contents 1s forwards 1s;
+}
 
 .cake-container {
-  border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .img-div {
-  border: 1px solid red;
   height: 70%;
+  width: 70%;
   background-image: url(cake.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .text-container {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 0.75fr 0.25fr;
   justify-content: center;
   font-family: "Darumadrop One", cursive;
   text-align: center;
 }
 .text-div {
   font-size: 5em;
+}
+
+button {
+  padding: 20px 50px;
+  font-size: 2em;
+}
+
+@keyframes open-msg {
+  0% {
+    width: 1%;
+    height: 0%;
+  }
+  50% {
+    width: 1%;
+    height: 60%;
+  }
+  80% {
+    width: 30%;
+    height: 60%;
+  }
+  100% {
+    width: 30%;
+    height: 60%;
+  }
+}
+
+@keyframes contents {
+  0% {
+    opacity: 0;
+  }
+  50% {
+  }
+  80% {
+  }
+  100% {
+    opacity: 1;
+  }
 }
