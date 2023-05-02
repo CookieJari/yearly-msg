@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap");
+
+:root {
+  --color-light: #f6fbf4;
+  --color-bright-green: #5fd068;
+  --color-dark-green: #4b8673;
+  --color-contrast: #dac993;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0px;
+}
+.page-container {
+  border: 1px solid red;
+  height: 100%;
+  background-color: var(--color-dark-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.message-container {
+  background-color: var(--color-contrast);
+  border-radius: 50px;
+  color: var(--color-light);
+  width: 30%;
+  height: 60%;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+}
+
+.cake-container {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-div {
+  border: 1px solid red;
+  height: 70%;
+  background-image: url(cake.png);
+}
+
+.text-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  font-family: "Darumadrop One", cursive;
+  text-align: center;
+}
+.text-div {
+  font-size: 5em;
+}
